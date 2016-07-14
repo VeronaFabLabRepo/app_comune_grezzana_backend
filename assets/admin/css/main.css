@@ -1,0 +1,1398 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('/assets/admin/fonts/icomoon.eot?pvm5gj');
+    src:url('/assets/admin/fonts/icomoon.eot?#iefixpvm5gj') format('embedded-opentype'),
+        url('/assets/admin/fonts/icomoon.woff?pvm5gj') format('woff'),
+        url('/assets/admin/fonts/icomoon.ttf?pvm5gj') format('truetype'),
+        url('/assets/admin/fonts/icomoon.svg?pvm5gj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Corbert';
+	src: url('/assets/admin/fonts/Corbert_Regular_Regular.eot'); /* IE9 Compat Modes */
+	src: url('/assets/admin/fonts/Corbert_Regular_Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.woff') format('woff'), /* Modern Browsers */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.svg#Corbert_Regular_Regular') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'CorbertItalic';
+	src: url('/assets/admin/fonts/Corbert_Italic_Italic.eot'); /* IE9 Compat Modes */
+	src: url('/assets/admin/fonts/Corbert_Italic_Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.woff') format('woff'), /* Modern Browsers */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.svg#Corbert_Italic_Italic') format('svg'); /* Legacy iOS */
+}
+
+p, ul, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+html, button, input, select, textarea {
+	font-family: 'Corbert';
+	font-size: 16px;
+	font-weight: normal;
+}
+html, body {
+	background: #ecf0f2;
+	color: #000;
+	font-family: 'Corbert';
+	font-size: 16px;
+	font-weight: normal;
+}
+a {
+	color: #000;
+	font-weight: bold;
+}
+.blue {
+	color: #47a3da;
+}
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+	body.login #wrapper,
+	body.forgotPassword #wrapper,
+	body.resetPassword #wrapper {
+		padding-top: 10%;
+	}
+
+.content {
+	position: relative;
+	padding-bottom: 25px;
+	background: #fff;
+}
+
+a.left {
+	float: right;
+	color: #174b5c;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.right {
+	float: right;
+	color: #174b5c;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.add_button,
+.back_button,
+.openclose_button {
+	display: block;
+	float: right;
+	margin-right: 25px;
+	background: none;
+	color: #47a3da;
+	font-size: 20px;
+	text-align: left;
+	text-decoration: none;
+}
+	.add_button img,
+	.back_button img,
+	.openclose_button img {
+		margin-right: 5px;
+	}
+
+.openclose_button {
+	width: 135px;
+	height: 36px;
+	margin: 7px 25px 7px 0;
+	padding-left: 36px;
+	background: url(/assets/admin/img/openclose.png) no-repeat;
+	background-position: 0 0;
+	line-height: 36px;
+}
+.categories .openclose_button {
+	width: 185px;
+}
+.openclose_button.open {
+	background-position: 0 -36px;
+}
+.error {
+	color: #C00;
+}
+span.error {
+	display: block;
+	clear: both;
+}
+.smalltitle {
+	float: left;
+}
+
+.page_title {
+	padding: 35px 0;
+}
+	.page_title h1 {
+		float: left;
+		padding-left: 25px;
+		font-weight: normal;
+		text-transform: capitalize;
+	}
+	.page_title h2,
+	.page_title h3 {
+		padding-left: 25px;
+		font-weight: normal;
+	}
+
+.empty_list {
+	padding: 20px 0;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* =========== HEADER =========== */
+header {
+	position: relative;
+	height: 100px;
+	background: #FFF;
+}
+	header a.logo {
+		display: block;
+		float: left;
+		height: 64px;
+		padding: 18px 0;
+		margin-left: 25px;
+		color: #252525;
+		font-size: 36px;
+		font-weight: normal;
+		text-decoration: none;
+		line-height: 64px;
+	}
+		header a.logo img {
+			margin-right: 25px;
+			vertical-align: top;
+		}
+	header .buttons_hello {
+		float: right;
+		font-size: 15px;
+		height: 100px;
+		line-height: 100px;		
+	}
+	header .buttons_hello .user_icon,
+	header .buttons_hello h1,
+	header .buttons_hello a {
+		float: left;
+	}
+	header .buttons_hello h1 {
+		margin: 0 20px 0 10px;
+		line-height: 100px;
+		font-weight: normal;
+	}
+	header .buttons_hello a {
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin: 26px 25px 26px 0;
+	}
+		header .buttons_hello a img {
+			vertical-align: top;
+		}
+/* =========== END HEADER =========== */
+
+/* =========== SLIDE TOP MENU =========== */
+.topmenu {
+	background: #47a3da;
+	position: fixed;
+}
+	.topmenu h3 {
+		height: 60px;
+		margin: 0;
+		padding: 20px;
+		font-weight: 300;
+		font-size: 1.9em;
+		background: #0d77b6;
+		color: #afdefa;
+	}
+	.topmenu a {
+		display: block;
+		color: #fff;
+		font-size: 1em;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.topmenu a:hover {
+		background: #258ecd;
+	}
+	.topmenu a:active {
+		background: #afdefa;
+		color: #47a3da;
+	}
+
+.topmenu-horizontal {
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 1000;
+	overflow: hidden;
+}
+	.topmenu-horizontal h3 {
+		float: left;
+		height: 60px;
+		width: 18%;
+		padding: 20px;
+	}
+	.topmenu-horizontal a {
+		float: left;
+		width: 20%;
+		height: 30px;
+		padding: 10px;
+		line-height: 30px;
+		border-left: 1px solid #258ecd;
+	}
+	.topmenu-horizontal a#close_settings_menu {
+		position: absolute;
+		left: 83%;
+		width: 32px;
+		height: 32px;
+		border: none;
+		bottom: 0;
+	}
+.topmenu-top {
+	top: -100px;
+}
+.topmenu-top.topmenu-open {
+	top: 0px;
+}
+/* Transitions */
+.topmenu {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* =========== END SLIDE TOP MENU =========== */
+
+
+/* =========== MENU =========== */
+nav.mainnav {
+	background: #47a3da;
+}
+	nav.mainnav a {
+		display: block;
+		float: left;
+		height: 50px;
+		padding: 0 20px;
+		color: #FFF;
+		font-size: 16px;
+		line-height: 50px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	nav.mainnav a.active,
+	nav.mainnav a:hover {
+		background: #078AD9;
+		color: #FFF;
+	}
+/* =========== END MENU =========== */
+
+/* ============= LOGIN FORM =========== */
+.login_logo {
+	width: 325px;
+	height: 64px;
+	margin: 0 auto 20px;
+}
+	.login_logo img {
+		display: block;
+		float: left;
+		margin: 0 25px;
+	}
+	.login_logo h1 {
+		float: left;
+		color: #000;
+		font-size: 20px;
+		line-height: 64px;
+		font-weight: normal;
+	}
+.form_box {
+	width: 325px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #2e3133;
+	text-align: left;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.form_box .captcha_container {
+	margin-bottom: 20px;
+}
+.form_box p {
+	color: #FFF;
+}
+	.form_box .title {
+		position: relative;
+		height: 40px;
+		padding: 0;
+		font-size: 22px;
+		line-height: 40px;
+		color: #FFF;
+	}
+	.form_box .title.small {
+		height: 25px;
+		padding: 5px 0;
+		font-size: 17px;
+		line-height: 25px;
+	}
+		.form_box .field {
+			width: 325px;
+			margin-bottom: 35px;
+		}
+		.form_box .field.remember {
+			margin-bottom: 10px;
+		}
+			.form_box input[type="text"],
+			.form_box input[type="password"] {
+				width: 313px;
+				height: 32px;
+				padding-left: 10px;
+				font-size: 20px;
+				border: 1px #DCDCDC solid;
+			}
+			.form_box .error input[type="text"],
+			.form_box .error input[type="password"],
+			.error .recaptcha_theme_red #recaptcha_response_field {
+				background: #FADEE8;
+				border: 1px #CC0000 solid;
+			}
+			.form_box .submit_container {
+				position: relative;
+				width: 323px;
+				height: 40px;
+				text-align: right;
+			}
+			.form_box input[type="submit"] {
+				width: 140px;
+				height: 40px;
+				background: #47a3da;
+				color: #FFF;
+				border: none;
+				font-family: 'Corbert';
+				font-size: 20px;
+			}
+			.form_box .checkbox_field {
+				display: block;
+				float: left;
+				margin-right: 10px;
+			}
+			.form_box .checkbox_field input {
+				float: left;
+				margin-top: 5px;
+			}
+			.form_box .checkbox_label {
+				color: #FFF;
+			}
+			.form_box .link_container {
+				margin-top: 20px;
+				text-align: right;
+			}
+				.form_box .link_container a,
+				.form_box p a {
+					color: #47a3da;
+					font-style: italic;
+					text-decoration: none;
+				}
+				.form_box .link_container a:hover {
+					color: #FFF;
+				}
+
+/* =========== END LOGIN FORM ========= */
+
+
+/*   ============== OVERLAY ===========   */
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	background-color: rgb(0, 0, 0);
+	z-index: 150;
+}
+.overlay_content {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #FFF;
+	z-index: 200;
+	overflow: hidden;
+}
+/*   ============== END OVERLAY ===========   */
+
+/*   ============ PAGINATION ============   */
+ul.pagination {
+	width: 255px;
+	height: 37px;
+	margin: 20px auto;
+	list-style-type: none;
+}
+	ul.pagination li {
+		position: relative;
+		display: block;
+		float: left;
+		width: 35px;
+		height: 33px;
+		background: url(/img/bg_pagination.jpg) repeat-x;
+		border-top: 1px #d5d5d5 solid;
+		border-bottom: 1px #d5d5d5 solid;
+		line-height: 33px;
+		text-align: center;
+	}
+	ul.pagination li.active,
+	ul.pagination li:hover {
+		background: #1F576A;
+	}
+		ul.pagination li.active a,
+		ul.pagination li:hover a {
+			color: #FFF;
+			border-left: 1px #1F576A solid;
+			border-right: 1px #1F576A solid;
+		}
+		ul.pagination li a {
+			display: block;
+			color: #7C7C7C;
+			font-size: 16px;
+			font-weight: bold;
+			border-left: 1px #FFF solid;
+			border-right: 1px #d5d5d5 solid;
+			font-family: Arial, sans-serif;
+			text-decoration: none;
+		}
+		ul.pagination li.prev {
+			border-left: 1px #d5d5d5 solid;
+			border-radius: 66px 0 0 66px;
+		}
+		.lt-ie9 ul.pagination li.prev {
+			behavior: url(/js/vendor/PIE.php);
+		}
+			ul.pagination li.prev a {
+				border-left: none;
+			}
+		ul.pagination li.next {
+			border-right: 1px #d5d5d5 solid;
+			border-radius: 0 66px 66px 0;
+		}
+		.lt-ie9 ul.pagination li.next {
+			behavior: url(/js/vendor/PIE.php);
+		}
+			ul.pagination li.next a {
+				border-right: none;
+			}
+/*   ============ END PAGINATION ============   */
+
+
+/* ============= FOOTER =========== */
+footer {
+	margin-top: 10px;
+}
+	footer p {
+		margin-top: 5px;
+		color: #7F7F7F;
+		font-size: 11px;
+		font-weight: normal;
+		font-family: Arial, sans-serif;
+		text-align: center;
+	}
+/* =========== END FOOTER =========== */
+
+
+/* ============= LIST =========== */
+.entrylist {
+	display: block;
+	width: 950px;
+	list-style-type: none;
+	margin: 0 auto;
+}
+	.entrylist li.header {
+		display: block;
+		width: 100%;
+		height: 46px;
+		background: #47a3da;
+		color: #FFF;
+		line-height: 46px;
+	}
+	.entrylist li.subheader {
+		display: block;
+		width: 100%;
+		height: 46px;
+		background: #95D1F5;
+		color: #FFF;
+		line-height: 46px;
+	}
+	.entrylist li {
+		display: block;
+		width: 100%;
+		height: 50px;
+		background: #F1F1F1;
+		line-height: 50px;
+		overflow: hidden;
+	}
+	.entrylist.cfields li,
+	.entrylist.categories li {
+		height: auto;
+		overflow: visible;
+	}
+		.entrylist li:nth-child(2n) {
+			background: #e4e4e4;
+		}
+	.entrylist.cfields_block,
+	.entrylist.categories_block {
+		display: none;
+		border-bottom: 5px #FFF solid;
+	}
+	.entrylist li .element {
+		display: block;
+		float: left;
+		padding: 0 15px;
+		text-decoration: none;
+	}
+	.entrylist li a.element {
+		color: #47a3da;
+		font-weight: bold;
+		font-size: 16px;
+		text-transform: lowercase;
+	}
+	.entrylist li a.element:visited {
+		color: #47a3da;
+	}
+	.entrylist li .element.id,
+	.entrylist li .element.status,
+	.entrylist li .element.link_action,
+	.entrylist li .element.icon {
+		display: block;
+		width: 110px;
+		height: 100%;
+		text-align: center;
+		overflow: hidden;
+	}
+	.entrylist li .element.icon {
+		width: 36px;
+		padding: 0 5px;
+	}
+	.entrylist li .element.link_action {
+		float: right;
+		padding: 0 5px;
+		color: #47a3da;
+	}
+	.entrylist li .element.title {
+		width: 430px;
+	}
+		.entrylist li .element.title a {
+			text-decoration: none;
+			font-weight: normal;
+		}
+		.entrylist li .element.title a:hover {
+			text-decoration: underline;
+		}
+	.entrylist.cfields li .element.title {
+		width: 420px;
+	}
+	.entrylist.categories li .element.title {
+		width: 330px;
+	}
+	.entrylist.cfields_block li .element.title {
+		padding-left: 0;
+	}
+	.entrylist.cfields_block li.subheader .element.title,
+	.entrylist.categories_block li.subheader .element.title {
+		padding-left: 15px;
+	}
+	.entrylist li .element.status {
+		width: 80px;
+	}
+	.entrylist li .element.actions {
+		float: right;
+		width: 210px;
+		text-align: center;
+	}
+	.entrylist.cfields li.header .element.actions,
+	.entrylist.categories li.header .element.actions {
+		width: 320px;
+	}
+		.entrylist li a.element img {
+			margin-right: 5px;
+		}
+		.entrylist li a.element.status img {
+			margin: 0;
+		}
+			.entrylist li a.element.status img {
+				display: block;
+				width: 36px;
+				height: 36px;
+				margin: 7px auto;
+			}
+				.entrylist li a.element.status img.offline {
+					background: url(/assets/admin/img/world_cancel.png) no-repeat;
+				}
+				.entrylist li a.element.status img.live {
+					background: url(/assets/admin/img/world_checkmark.png) no-repeat;
+				}
+#dialog-confirm {
+	display: none;
+}
+	#dialog-confirm .ui-icon.ui-icon-alert {
+		display: block;
+		float: left;
+		height: 16px;
+		margin: 0 7px 70px 0;
+	}
+	#dialog-confirm p {
+		font-size: 15px;
+	}
+.success_box {
+	position: absolute;
+	width: 950px;
+	padding: 5px 25px;
+	z-index: 100;
+	background: #AAE8A7;
+	color: #266623;
+	font-style: italic;
+}
+/* ============= END LIST =========== */
+
+
+/* ============= FORM =========== */
+.edit_form {
+	margin: 0 25px;
+}
+	.edit_form .field {
+		margin-bottom: 25px;
+	}
+	body.categories .edit_form .field.id_content_type {
+		margin-bottom: 0;
+	}
+
+	.edit_form .submit_container input {
+		width: auto;
+		min-width: 140px;
+		height: 40px;
+		margin-right: 20px;
+		padding: 0 10px;
+		background: #47a3da;
+		color: #FFF;
+		border: none;
+		font-family: 'Corbert';
+		font-size: 20px;
+	}
+
+	.edit_form .content_capability {
+		margin-bottom: 20px;
+	}	
+		.edit_form .content_capability .field {
+			float: left;
+			width: 33%;
+			margin: 0;
+		}
+		.edit_form .content_capability h3 {
+			font-style: italic;
+		}
+	.edit_form label {
+		display: block;
+		font-size: 16px;
+		font-style: italic;
+	}
+	.edit_form label.checkbox_label {
+		float: left;
+		width: auto;
+	}
+	.edit_form input[type=text],
+	.edit_form input[type=password] {
+		width: 675px;
+		height: 32px;
+		padding: 0 0 0 3px;
+		border: 1px #ccc solid;
+	}
+	.edit_form input.available {
+		float: left;
+		background: #94F2C6;
+		border-color: #0A7844;
+	}
+	.edit_form input.unavailable {
+		float: left;
+		background: #F0A8B6;
+		border-color: #C00;
+	}
+	.edit_form .available_text,
+	.edit_form .unavailable_text {
+		display: block;
+		float: left;
+		width: 120px;
+		height: 32px;
+		line-height: 32px;
+		padding-left: 10px;
+		font-style: italic;
+	}
+	.edit_form .available_text {
+		color: #0A7844;
+	}
+	.edit_form .unavailable_text {
+		color: #C00;
+	}
+	.edit_form .attach_field {
+		display: block;
+		margin-top: 5px;
+	}
+		.edit_form .attach_field input[type=text] {
+			width: 300px;
+		}
+	.edit_form textarea {
+		width: 675px;
+		height: 100px;
+		resize: none;
+	}
+
+	.edit_form .arrow.big_green {
+		float: left;
+		margin: 0 10px 0 10px;
+	}
+		.edit_form .field.error label {
+			color: #C00;
+			font-weight: bold;
+		}
+		.edit_form .field.error input[type=text],
+		.edit_form .field.error textarea,
+		.edit_form .field.error table.presentation {
+			border: 1px #C00 solid;
+			background: #F0A8B6;
+		}
+	.edit_form select {
+		width: 680px;
+		height: 32px;
+		border: 1px #ccc solid;
+	}
+	.edit_form select.multiselect {
+		width: 680px;
+		height: 100px;
+		border: 1px #ccc solid;
+	}
+	.edit_form .radio_field {
+		display: block;
+		float: left;
+		min-width: 120px;
+		height: 20px;
+		margin-top: 5px;
+		line-height: 15px;
+	}
+		.edit_form .radio_field input {
+			float: left;
+			margin-right: 10px;
+		}
+	.edit_form .checkbox_field,
+	.edit_form .multicheckbox_field {
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+	.edit_form .multicheckbox_field {
+		margin-right: 20px;
+	}
+		.edit_form .checkbox_field input,
+		.edit_form .multicheckbox_field input {
+			float: left;
+			margin-top: 5px;
+		}
+		.edit_form .multicheckbox_field input {
+			margin-right: 10px;
+		}
+.hanger {
+	display: none;
+	margin-bottom: 20px;
+}
+.hanger.show {
+	display: block;
+}
+.edit_form .field .error {
+	margin-top: 2px;
+	font-style: italic;
+}
+.options {
+	display: none;
+	width: 700px;
+}
+.options.show {
+	display: block;
+}
+	.options .options_title h4 {
+		float: left;
+	}
+	.options .options_title #add_option {
+		display: none;
+		float: right;
+		margin-right: 15px;
+	}
+	.options .options_title #add_option.show {
+		display: block;
+	}
+	.options .col {
+		float: left;
+		width: 335px;;
+	}
+		.options .col input {
+			width: 310px;
+		}
+	.options ul {
+		list-style-type: none;
+	}
+		.options ul li {
+			padding-left: 30px;
+			background: url(/assets/admin/img/pin.png) no-repeat left #FFF;
+		}
+
+.file_upload_features,
+.image_upload_features,
+.linked_content_features {
+	display: none;
+}
+.file_upload_features.show,
+.image_upload_features.show,
+.linked_content_features.show {
+	display: block;
+}
+
+.image_upload,
+.file_upload {
+	float: left;
+	width: 300px;
+	height: 100px;
+}
+.image_upload.gallery {
+	float: none;
+	width: 700px;
+	height: 80px;
+}
+.gallery {
+	width: 700px;
+	list-style-type: none;
+}
+.preview_image {
+	position: relative;
+	float: left;
+	width: 150px;
+	height: 106px;
+}
+	.preview_image .lightbox {
+		position: absolute;
+		display: block;
+		padding: 2px;
+		border: 1px #ccc solid;
+	}
+	.preview_image .lightbox img {
+		width: auto;
+		height: 100px;
+	}
+	.preview_image .delete_image {
+		position: absolute;
+		display: block;
+		top: -17px;
+		right: -6px;
+	}
+		.preview_image .delete_image img {
+			width: 36px;
+			height: 36px;
+		}
+.gallery .preview_image {
+	margin-right: 10px;
+}
+.preview_file {
+	position: relative;
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-top: 10px;
+}
+	.preview_file .delete_file {
+		position: absolute;
+		display: block;
+		top: -8px;
+		right: -1px;
+		width: 16px;
+		height: 16px;
+	}
+		.preview_file .delete_file img {
+			width: 16px;
+			height: 16px;
+		}
+a.hint {
+	position: relative;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-left: -5px;
+	background: url(/assets/admin/img/hint.png) no-repeat;
+}
+	a.hint span {
+		display: none;
+	}
+	a.hint:hover span {
+		position: absolute;
+		top: -45px;
+		left: -15px;
+		display: block;
+		width: auto;
+		height: auto;
+		padding: 5px 10px;
+		content: attr(title);
+		text-align: center;
+		color: #fff;
+		background: #078AD9;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		white-space: nowrap;
+	}
+	a.hint:hover span:after {
+		content: "";
+		position: absolute;
+		left: 16px;
+		bottom: -20px;
+		display: block;
+		width: 0;
+		height: 0;
+		border-color: #078AD9 transparent transparent transparent;
+		border-style: solid;
+		border-width: 10px;
+	}
+
+.tabs {
+	position: relative;
+	width: 100%;
+	margin: 1em 0 2em;
+	overflow: hidden;
+	font-weight: 300;
+}
+	.tabs nav {
+		text-align: center;
+	}
+		.tabs nav ul {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+			.tabs nav ul li {
+				position: relative;
+				display: block;
+				float: left;
+				margin: 0 0.25em;
+				border: 1px solid #BECBD2;
+				border-bottom: none;
+			}
+			.tabs nav li.tab-current {
+				z-index: 100;
+				border: 1px solid #078AD9;
+				box-shadow: inset 0 2px #078AD9;
+				border-bottom: none;
+			}
+			.tabs nav li.tab-current:before,
+			.tabs nav li.tab-current:after {
+				content: '';
+				position: absolute;
+				bottom: 0; right: 100%;
+				width: 1000px;
+				height: 1px;
+				background: #078AD9;
+			}
+			.tabs nav li.tab-current:after {
+				left: 100%; right: auto;
+				width: 4000px;
+			}
+			.tabs nav a {
+				display: block;
+				padding: 0 1.25em;
+				color: #BECBD2;
+				font-size: 1em;
+				line-height: 2.5;
+				white-space: nowrap;
+				text-decoration: none;
+			}
+			.tabs nav a:hover {
+				color: #768e9d;
+			}
+			.tabs nav li.tab-current a {
+				color: #078AD9;
+			}
+			.tabs nav a:before {
+				display: inline-block;
+				margin: -0.25em 0.4em 0 0;
+				vertical-align: middle;
+				font-weight: normal;
+				font-variant: normal;
+				font-family: 'icomoon';
+				line-height: 1;
+				speak: none;
+				-webkit-font-smoothing: antialiased;
+				text-transform: none;
+			}
+			.icon-pencil:before {
+				content: "\e600";
+			}
+			.icon-tags:before {
+				content: "\e601";
+			}
+			.icon-settings:before {
+				content: "\e602";
+			}
+			.form_content section {
+				display: none;
+				max-width: 1230px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			.form_content section:before,
+			.form_content section:after {
+				content: '';
+				display: table;
+			}
+			.form_content section:after {
+				clear: both;
+			}
+			/* Fallback example */
+			.no-js .form_content section {
+				display: block;
+				padding-bottom: 2em;
+				border-bottom: 1px solid #47a3da;
+			}
+			.form_content section.content-current {
+				display: block;
+			}
+
+/* ============= END FORM =========== */
+
+/* =============== PAGE FORM FIELDS ============= */
+.field.content_types_list,
+.field.content_list_categories,
+.field.content_list,
+.field.content_list_category,
+.field.content_list_pagination,
+.field.content_list_limit,
+.field.content_list_order,
+.field.link,
+.field.link_title,
+.field.link_open_in,
+.field.action,
+.field.default_frontend_controller {
+	display: none;
+}
+/* ============= END PAGE FORM FIELDS =========== */
+
+
+
+/* ============= CSS for timepicker ============== */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+/* ============= END CSS for timepicker ============== */
+
+
+/* ============= FACTOTUM VERSION =========== */
+.factotum_version {
+	padding-left: 25px;
+}
+	.factotum_version h4.blue {
+		margin-top: 20px;
+	}
+	.factotum_version ul {
+		list-style-type: square;
+		padding-left: 25px;
+	}
+/* ============= END FACTOTUM VERSION =========== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+}
+
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *	`contenteditable` attribute is included anywhere else in the document.
+ *	Otherwise it causes space to appear at the top and bottom of elements
+ *	that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *	`:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+	   (-o-min-device-pixel-ratio: 5/4),
+	   (-webkit-min-device-pixel-ratio: 1.25),
+	   (min-resolution: 120dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/*
+	 * Don't show links for images, or javascript/internal links
+	 */
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	thead {
+		display: table-header-group; /* h5bp.com/t */
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}

@@ -1,0 +1,13 @@
+Priorità 1
+Aggiungere ricerca per categorie nella contentSearch
+Aggiungere filtro per categoria nella lista di contenuti
+
+Priorità 2
+Aggiungere gestione id_parent all'interno del CMS
+
+Priorità 3
+Aggiungere specifica ControllerName/ActionName
+Creazione installer
+
+Priorità 4
+Impostare update di tutte i valori (ricordarsi dove)

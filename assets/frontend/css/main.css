@@ -1,0 +1,801 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+	font-family: 'Corbert';
+	src: url('/assets/admin/fonts/Corbert_Regular_Regular.eot'); /* IE9 Compat Modes */
+	src: url('/assets/admin/fonts/Corbert_Regular_Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.woff') format('woff'), /* Modern Browsers */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('/assets/admin/fonts/Corbert_Regular_Regular.svg#Corbert_Regular_Regular') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'CorbertItalic';
+	src: url('/assets/admin/fonts/Corbert_Italic_Italic.eot'); /* IE9 Compat Modes */
+	src: url('/assets/admin/fonts/Corbert_Italic_Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.woff') format('woff'), /* Modern Browsers */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('/assets/admin/fonts/Corbert_Italic_Italic.svg#Corbert_Italic_Italic') format('svg'); /* Legacy iOS */
+}
+
+p, ul, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+html, button, input, select, textarea {
+	font-family: 'Corbert';
+	font-size: 16px;
+	font-weight: normal;
+}
+html, body {
+	background: #ecf0f2;
+	color: #000;
+	font-family: 'Corbert';
+	font-size: 16px;
+	font-weight: normal;
+}
+a {
+	color: #078AD9;
+}
+.error {
+	color: #C00;
+}
+#wrapper {
+	width: 950px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	background: #FFF;
+}
+.content_wrapper {
+	padding: 25px;
+}
+/* =========== HEADER =========== */
+header {
+	position: relative;
+	height: 100px;
+	background: #FFF;
+}
+	header a.logo {
+		display: block;
+		float: left;
+		height: 64px;
+		padding: 18px 0;
+		margin-left: 25px;
+		color: #252525;
+		font-size: 36px;
+		font-weight: normal;
+		text-decoration: none;
+		line-height: 64px;
+	}
+		header a.logo img {
+			margin-right: 25px;
+			vertical-align: top;
+		}
+		header nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+			header nav a,
+			header nav span {
+				display: block;
+				float: right;
+				height: 20px;
+				padding: 0 12px;
+				color: #1f576a;
+				font-family: Arial, sans-serif;
+				font-size: 10px;
+				font-weight: bold;
+				border-bottom: 1px #8fabb4 solid;
+				border-left: 1px #8fabb4 solid;
+				line-height: 20px;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			header nav span {
+				color: #000;
+			}
+			header #subnav_account {
+				display: none;
+				position: absolute;
+				top: 21px;
+				right: 72px;
+				background: #CBC9C9;
+				border-right: 1px #8fabb4 solid;
+			}
+/* =========== END HEADER =========== */
+
+
+/* =========== MENU =========== */
+nav.mainnav {
+	background: #47a3da;
+}
+	nav.mainnav a {
+		display: block;
+		float: left;
+		height: 50px;
+		padding: 0 20px;
+		color: #FFF;
+		font-size: 16px;
+		line-height: 50px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	nav.mainnav a.active,
+	nav.mainnav a:hover {
+		background: #078AD9;
+		color: #FFF;
+	}
+/* =========== END MENU =========== */
+
+/* ============= FOOTER =========== */
+footer {
+	margin-top: 10px;
+}
+	footer p {
+		margin-top: 5px;
+		color: #7F7F7F;
+		font-size: 11px;
+		font-weight: normal;
+		font-family: Arial, sans-serif;
+		text-align: center;
+	}
+/* =========== END FOOTER =========== */
+
+/* ============= LOGIN FORM =========== */
+.form_box {
+	width: 325px;
+	margin: 20px auto 0;
+	padding: 20px;
+	background: #2e3133;
+	text-align: left;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.form_box .captcha_container {
+	margin-bottom: 20px;
+}
+.form_box p {
+	color: #FFF;
+}
+	.form_box .title {
+		position: relative;
+		height: 40px;
+		padding: 0;
+		font-size: 22px;
+		line-height: 40px;
+		color: #FFF;
+	}
+	.form_box .title.small {
+		height: 25px;
+		padding: 5px 0;
+		font-size: 17px;
+		line-height: 25px;
+	}
+		.form_box .field {
+			width: 325px;
+			margin-bottom: 35px;
+		}
+		.form_box .field.remember {
+			margin-bottom: 10px;
+		}
+			.form_box input[type="text"],
+			.form_box input[type="password"] {
+				width: 313px;
+				height: 32px;
+				padding-left: 10px;
+				font-size: 20px;
+				border: 1px #DCDCDC solid;
+			}
+			.form_box .error input[type="text"],
+			.form_box .error input[type="password"],
+			.error .recaptcha_theme_red #recaptcha_response_field {
+				background: #FADEE8;
+				border: 1px #CC0000 solid;
+			}
+			.form_box .submit_container {
+				position: relative;
+				width: 323px;
+				height: 40px;
+				text-align: right;
+			}
+			.form_box input[type="submit"] {
+				width: auto;
+				height: 40px;
+				padding: 0 10px;
+				background: #47a3da;
+				color: #FFF;
+				border: none;
+				font-family: 'Corbert';
+				font-size: 20px;
+			}
+			.form_box .checkbox_field {
+				display: block;
+				float: left;
+				margin-right: 10px;
+			}
+			.form_box .checkbox_field input {
+				float: left;
+				margin-top: 5px;
+			}
+			.form_box .checkbox_label {
+				color: #FFF;
+			}
+			.form_box .link_container {
+				margin-top: 20px;
+				text-align: right;
+			}
+				.form_box .link_container a,
+				.form_box p a {
+					color: #47a3da;
+					font-style: italic;
+					text-decoration: none;
+				}
+				.form_box .link_container a {
+					margin-left: 15px;
+				}
+				.form_box .link_container a:hover {
+					color: #FFF;
+				}
+/* =========== END LOGIN FORM ========= */
+
+
+/* =========== TEAM LIST =========== */
+.content_list.team {
+	margin-top: 20px;
+	list-style-type: none;
+}
+	.content_list.team li {
+		float: left;
+		width: 48%;
+		margin-right: 2%;
+	}
+	.content_list.team li:nth-child(2n) {
+		margin-right: 0;
+	}
+		.content_list.team li .member img {
+			float: left;
+			margin-right: 8px;
+		}
+/* =========== END TEAM LIST =========== */
+
+/* =========== ONLY TEXT =========== */
+.content .only_text {
+	padding: 25px 25px 0 25px;
+	margin-left: -45px;
+}
+	.content .only_text h4 {
+		width: 425px;
+		margin: 0 0 20px 45px;
+		color: #000;
+		font-family: 'ArcherMediumPro';
+		font-size: 22px;
+		line-height: 26px;
+		text-transform: uppercase;
+	}
+	.content .only_text p {
+		float: left;
+		width: 425px;
+		margin-left: 45px;
+		color: #000;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.content .faqs {
+		margin: 25px 0;
+		padding: 0 25px;
+		list-style-type: none;
+	}
+	.content .faqs .question,
+	.content .faqs .answer {
+		display: block;
+		color: #47c5f1;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.content .faqs .question {
+		margin-bottom: 20px;
+	}
+		.content .faqs .question img {
+			display: block;
+			float: left;
+			width: 10px;
+			height: 10px;
+			margin: 4px 5px 0 0;
+			background: url(/img/little_arrows.jpg) no-repeat;
+			background-position: 0 0;
+		}
+		.content .faqs .question.open img {
+			height: 5px;
+			margin-top: 6px;
+			background-position: 0 -10px;
+		}
+	.content .faqs .answer {
+		display: none;
+		margin-bottom: 20px;
+		padding: 0 15px;
+		color: #000;
+		font-weight: normal;
+	}
+.news {
+	margin-bottom: 20px;
+}
+	.news p {
+		margin-bottom: 20px;
+	}
+	.news img {
+		float: left;
+		margin-right: 10px;
+		padding: 2px;
+		border: 1px #ccc solid;
+	}
+/* =========== END ONLY TEXT =========== */
+
+
+/* =========== CONTENT LIST =========== */
+.content_list {
+	list-style-type: none;
+}
+.pagination {
+	list-style-type: none;
+}
+	.pagination li {
+		float: left;
+		margin-right: 20px;
+		font-family: Arial;
+		font-size: 16px;
+	}
+	.pagination li.active {
+		font-weight: bold;
+	}
+		.pagination li a {
+			text-decoration: none;
+		}
+/* =========== END CONTENT LIST =========== */
+
+
+/* ============= CONTACT FORM =========== */
+.contact_column {
+	float: left;
+	margin: 10px 20px 0 0 ;
+}
+	.contact_form .field {
+		margin-bottom: 25px;
+	}
+	.contact_form .submit_container input {
+		width: auto;
+		min-width: 140px;
+		height: 40px;
+		margin-right: 20px;
+		padding: 0 10px;
+		background: #47a3da;
+		color: #FFF;
+		border: none;
+		font-family: 'Corbert';
+		font-size: 20px;
+	}
+	.contact_form label {
+		display: block;
+		font-size: 16px;
+		font-style: italic;
+	}
+	.contact_form label.checkbox_label {
+		float: left;
+		width: auto;
+	}
+	.contact_form input[type=text],
+	.contact_form input[type=password] {
+		width: 530px;
+		height: 32px;
+		padding: 0 0 0 3px;
+		border: 1px #ccc solid;
+	}
+	.contact_form textarea {
+		width: 530px;
+		height: 100px;
+		resize: none;
+		border: 1px #ccc solid;
+	}
+		.contact_form .field .error {
+			margin-top: 2px;
+			font-style: italic;
+		}
+		.contact_form .field.error label {
+			color: #C00;
+			font-weight: bold;
+		}
+		.contact_form .field.error input[type=text],
+		.contact_form .field.error textarea,
+		.contact_form .field.error table.presentation {
+			border: 1px #C00 solid;
+			background: #F0A8B6;
+		}
+	.contact_form select {
+		width: 680px;
+		height: 32px;
+		border: 1px #ccc solid;
+	}
+	.contact_form select.multiselect {
+		width: 680px;
+		height: 100px;
+		border: 1px #ccc solid;
+	}
+	.contact_form .radio_field {
+		display: block;
+		float: left;
+		min-width: 120px;
+		height: 20px;
+		margin-top: 5px;
+		line-height: 15px;
+	}
+		.contact_form .radio_field input {
+			float: left;
+			margin-right: 10px;
+		}
+	.contact_form .checkbox_field,
+	.contact_form .multicheckbox_field {
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+	.contact_form .multicheckbox_field {
+		margin-right: 20px;
+	}
+		.contact_form .checkbox_field input,
+		.contact_form .multicheckbox_field input {
+			float: left;
+			margin-top: 5px;
+		}
+		.contact_form .multicheckbox_field input {
+			margin-right: 10px;
+		}
+
+/* ============= END CONTACT FORM =========== */
+
+/* ============= NEWS FORM =========== */
+.news_form .field {
+	margin-bottom: 25px;
+}
+.news_form .field.permalink {
+	display: none;
+}
+	.news_form .submit_container input {
+		width: auto;
+		min-width: 140px;
+		height: 40px;
+		margin-right: 20px;
+		padding: 0 10px;
+		background: #47a3da;
+		color: #FFF;
+		border: none;
+		font-family: 'Corbert';
+		font-size: 20px;
+	}
+	.news_form label {
+		display: block;
+		font-size: 16px;
+		font-style: italic;
+	}
+	.news_form label.checkbox_label {
+		float: left;
+		width: auto;
+	}
+	.news_form input[type=text],
+	.news_form input[type=password] {
+		width: 530px;
+		height: 32px;
+		padding: 0 0 0 3px;
+		border: 1px #ccc solid;
+	}
+	.news_form textarea {
+		width: 530px;
+		height: 100px;
+		resize: none;
+		border: 1px #ccc solid;
+	}
+		.news_form .field .error {
+			margin-top: 2px;
+			font-style: italic;
+		}
+		.news_form .field.error label {
+			color: #C00;
+			font-weight: bold;
+		}
+		.news_form .field.error input[type=text],
+		.news_form .field.error textarea {
+			border: 1px #C00 solid;
+			background: #F0A8B6;
+		}
+
+
+/* ============= END NEWS FORM =========== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+}
+
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *	`contenteditable` attribute is included anywhere else in the document.
+ *	Otherwise it causes space to appear at the top and bottom of elements
+ *	that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *	`:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+	   (-o-min-device-pixel-ratio: 5/4),
+	   (-webkit-min-device-pixel-ratio: 1.25),
+	   (min-resolution: 120dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/*
+	 * Don't show links for images, or javascript/internal links
+	 */
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	thead {
+		display: table-header-group; /* h5bp.com/t */
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
